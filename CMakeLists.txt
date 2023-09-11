@@ -14,10 +14,11 @@ link_directories(${GSE_LIBRARY_DIRS})
 
 
 add_executable(test main.c)
-#target_include_directories(test PUBLIC ${GSE_INCLUDE_DIRS})
-#target_link_libraries(test PUBLIC ${GSE_LIBRARIES})
-
 
 # application
 add_executable(performance ./app/performance.c)
 target_link_libraries(performance PUBLIC ${GSE_LIBRARIES})
+
+# application
+add_executable(tunnel ./app/tunnel.c)
+target_link_libraries(tunnel PUBLIC ${GSE_LIBRARIES})
